@@ -1,0 +1,365 @@
+body {
+  background-color: #E6E4F1;
+  margin: 0; /* Remove default body margin */
+  height: 100vh; /* Ensure the body takes up the full height of the viewport */
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Ensure content stacks vertically */
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center; /* Ensure text is centered */
+  min-height: 100%; /* Ensure content takes full height of viewport */
+}
+
+/* LANDING PAGE */
+.welcome-blurb {
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.welcome-blurb2 {
+  font-weight: bold;
+  font-size: 21px;
+  margin-top: 0px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the profile image and text horizontally */
+  gap: 40px;
+  height: auto; /* Make sure the height is flexible */
+  margin-top: 40px;
+  margin-bottom: 90px;
+}
+
+.profile-photo {
+  border: 7px solid #201C35;
+  border-radius: 15%;
+  width: 200px;
+  object-fit: cover; /* Ensure the image maintains its aspect ratio */
+}
+
+.profile-blurb-container {
+  background-color: #201C35; /* Same color as the profile photo border */
+  padding: 20px;
+  border-radius: 15px; /* Match the border radius of the profile photo */
+  max-width: 500px; /* Control the width of the bio */
+  text-align: center; /* Center the text */
+  margin-top: 0; /* Remove margin top to keep alignment consistent */
+  display: flex;
+  align-items: center; /* Vertically center the text */
+  justify-content: center;
+}
+
+
+.profile-blurb {
+  color: white; /* White text on dark background */
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* CODING PAGE */
+.bold-link {
+  text-decoration: none;
+  font-weight: bold;
+  color:#E6E4F1;
+}
+
+.coding-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.coding-header {
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Kanit", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color:#201C35;
+  transition: all 0.3s ease;
+}
+
+.coding-header:hover {
+  color: #09866D; /* Change color on hover */
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.repo-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.repo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.repo-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.repo-link {
+  text-decoration: none;
+  font-size: 1.2em;
+  font-family: "Kanit", sans-serif;
+  color: #201C35;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.repo-link:hover {
+  color: #09866D; /* Change color on hover */
+}
+
+.repo-link:hover {
+  text-decoration: none;
+}
+
+.repo-description {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+}
+
+.repo-photo {
+  border: 3px solid #201C35;
+  border-radius: 10;
+  width: 800px;
+}
+
+@media (max-width: 600px) {
+  .repo-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* CONTACT */
+.contact-container {
+  height: auto; /* Instead of min-height: 100vh; */
+  font-family: "Kanit", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-header {
+  text-align: center;
+  font-size: 2em;
+  font-family: "Kanit", sans-serif;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px; /* Limit the form width */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+form div {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 120px;
+}
+
+.submit {
+  font-family: "Kanit", sans-serif;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #201C35;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit:hover {
+  background-color: #23F0C7;
+  color: black;
+}
+
+p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+
+/* NAVMENU */
+.navmenu {
+  background-color: #201C35;
+  padding: 0;
+  margin: 0;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the left */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo Styling */
+.nav-logo {
+  flex-shrink: 0; /* Prevent the logo from shrinking */
+  margin-right: 20px; /* Space between the logo and nav items */
+  padding-left: 15px;
+}
+
+.nav-logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  max-height: 120px;
+  width: auto;
+  display: block;
+}
+
+/* Default menu (desktop) */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  width: calc(100% - 40px); /* Subtract padding on both sides */
+  /* Ensure links take full width minus logo and padding */
+}
+
+.nav-links li {
+  flex-grow: 1; /* Ensures each button gets equal width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-links a {
+  font-family: "Iceberg", sans-serif;
+  font-size: 82px;
+  text-decoration: none;
+  color: #E6E4F1;
+  padding: 10px 15px;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Ensure the buttons fill the entire space of each li */
+  height: 100%; /* Make sure buttons have equal height */
+  box-sizing: border-box; /* Prevent padding from affecting width/height */
+  text-align: center;
+}
+
+/* Individual button colors */
+.nav-coding a { color: #FFE347; }
+.nav-comics a { color: #23F0C7; }
+.nav-contact a { color: #EF767A; }
+
+.nav-coding a:hover { background-color: #FFE347; color: #201C35; }
+.nav-comics a:hover { background-color: #23F0C7; color: #201C35; }
+.nav-contact a:hover { background-color: #EF767A; color: #201C35; }
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 48px;
+  color: #E6E4F1;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.hamburger:hover {
+  color: #FFE347;
+}
+
+/* Responsive Mobile Menu */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Show menu button on small screens */
+    position: absolute;
+    right: 20px;
+    top: 40px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 0;
+    width: 100%;
+    background-color: #201C35;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 48px;
+    padding: 15px;
+    width: 100%; /* Make sure mobile links take up full width */
+  }
+}
