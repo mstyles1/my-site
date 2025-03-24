@@ -27,6 +27,7 @@ const ContactPage = () => {
       setStatus('Your message has been sent!');
     } catch (error) {
       setStatus('There was an error sending your message.');
+      console.error('Error sending email:', error);
     }
   };
   
