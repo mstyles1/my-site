@@ -276,6 +276,56 @@ a {
   margin: 0;
 }
 
+/* ComicsPage.css */
+.comics-page {
+  padding: 3rem 2rem;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.product-card {
+  background-color: #201c35;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 300px;
+}
+
+.product-card img {
+  width: 100%;
+  border: 2px solid yellow;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.product-card h3 {
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: .1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.product-card button {
+  padding: 0.5rem 1rem;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background-color: #333;
+}
+
 /* CONTACT */
 .contact-container {
   width: 100%;
@@ -388,7 +438,7 @@ p {
 
 /*Footer*/
 .footer {
-  background-color: #201c35; /* dark background */
+  background-color: #201c35; 
   padding: 1rem 0;
   text-align: center;
   font-size: 0.9rem;
