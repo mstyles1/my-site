@@ -296,24 +296,31 @@ a {
 }
 
 .product-card {
-  max-width: 300px; /* roughly your max-w-xs */
-  border: 3px solid #201c35;
-  background-color: #ffe347;
+  max-width: 300px; 
+  background-color: #201c35;  
   padding: 1rem;
   border-radius: 0.5rem;
-  text-align: left; /* override parent center so text inside cards aligns left */
   margin-bottom: 2rem;
 }
 
 .product-card img {
   width: 100%;
-  border-radius: 0.375rem;
+  border: 3px solid #ffe347;
   margin-bottom: 1rem;
 }
 
-button {
-  background-color: black;
+.product-title {
   color: white;
+  text-align: center;
+} 
+
+.product-price {
+  color:white
+}
+
+button {
+  background-color: e6e4f1;
+  color: black;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
   border: none;
@@ -321,7 +328,7 @@ button {
 }
 
 button:hover {
-  background-color: #333;
+  background-color: #ffe347;
 }
 
 /* CONTACT */
