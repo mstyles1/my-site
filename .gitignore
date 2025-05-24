@@ -1,3 +1,48 @@
+# Node modules folders (both root and client)
 node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build output folder
+build/
+client/build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Env files with secrets/config (don't commit these)
 .env
-/client/build
+client/.env
+server/.env
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE/editor folders
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+*.log
+
+# Cache folders
+.cache/
+client/node_modules/.cache/
+server/node_modules/.cache/
+
+# Git submodules metadata (if any accidentally added)
+.gitmodules
+
+# If you want to ignore local overrides for the build output inside client
+client/build/
+
+# Ignore any nested git repo inside node_modules (like the gh-pages cache)
+node_modules/.cache/gh-pages/
+
