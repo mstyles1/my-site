@@ -4,34 +4,46 @@ import axios from 'axios';
 const CodingPage = () => {
   const [repos, setRepos] = useState([]);
 
-  // Hardcoded data for the repositories 
+  // Hardcoded data for the repositories
   const repoDetails = {
+    "reckless-site": {
+      photo: "../images/reckless-site.png",
+      description: "Professional business site for Reckless Hippie Smoke Shop."
+    },
     "Cat-Adoption-Website-Sample": {
-      photo: "../images/kitten-adoption.jpg", 
+      photo: "../images/kitten-adoption.jpg",
       description: "A sample website for potential cat owners."
     },
     "Genuine-Gifs-Sample-Work": {
-      photo: "../images/Gif-searcher.png", 
+      photo: "../images/Gif-searcher.png",
       description: "A sample GIF search engine."
     },
     "Skate-Trivia-Sample": {
-      photo: "../images/skater-quiz.png", 
+      photo: "../images/skater-quiz.png",
       description: "A sample quiz for skate trivia."
     },
     "Todo-List-Sample": {
-      photo: "../images/todo-list.png", 
+      photo: "../images/todo-list.png",
       description: "A sample Todo-List maker."
     },
   };
 
-  
   useEffect(() => {
     axios.get("https://api.github.com/users/mstyles1/repos")
       .then(response => {
-        const repos = response.data;
-        // Exclude the 'my-site' repository
-        const filteredRepos = repos.filter(repo => repo.name !== 'my-site');
-        setRepos(filteredRepos);
+        let repos = response.data;
+
+        // Exclude 'my-site' repository
+        repos = repos.filter(repo => repo.name !== 'my-site');
+
+        // Put reckless-site at the top if it exists in the API response
+        repos = repos.sort((a, b) => {
+          if (a.name === "reckless-site") return -1;
+          if (b.name === "reckless-site") return 1;
+          return 0;
+        });
+
+        setRepos(repos);
       })
       .catch(error => console.error("Error fetching repos:", error));
   }, []);
@@ -39,11 +51,11 @@ const CodingPage = () => {
   return (
     <div className="coding-container">
       <a href="https://github.com/mstyles1/" target="_blank" rel="noopener noreferrer">
-      <h2 className="coding-header">GitHub Portfolio</h2>
+        <h2 className="coding-header">GitHub Portfolio</h2>
       </a>
       <ul className="repo-list">
         {repos.map(repo => {
-          const details = repoDetails[repo.name]; // Get the hardcoded details for the repo
+          const details = repoDetails[repo.name.toLowerCase()] || repoDetails[repo.name]; // case-safe check
           return (
             <li key={repo.id} className="repo-item">
               <div className="repo-info">

@@ -6,6 +6,7 @@ import LandingPage from "./component/LandingPage/LandingPage";
 import CodingPage from "./component/CodingPage/CodingPage";
 import ComicsPage from "./component/ComicsPage/ComicsPage";
 import ContactPage from "./component/ContactPage/ContactPage";
+import Footer from "./component/Footer/Footer";
 
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/comics" element={<ComicsPage />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };
