@@ -313,7 +313,7 @@ a {
 
 .product-card img {
   width: 100%;
-  border: 2px solid yellow;
+  border: 2px solid #ffe347;
   border-radius: 4px;
   margin-bottom: 1rem;
   flex-shrink: 0; /* avoid shrinking */
