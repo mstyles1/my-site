@@ -221,7 +221,6 @@ a {
   text-decoration: none;
 }
 
-/* REPO LIST (Vertical list, no flex) */
 .repo-list {
   padding: 0;
   margin: 0 auto;
@@ -230,7 +229,6 @@ a {
   width: 100%;
 }
 
-/* INDIVIDUAL REPO ITEM */
 .repo-item {
   box-sizing: border-box;
   padding: 15px;
@@ -242,7 +240,6 @@ a {
   text-align: center;
 }
 
-/* REPO LINK */
 .repo-link {
   text-decoration: none;
   font-size: 1.2em;
@@ -259,7 +256,6 @@ a {
   text-decoration: none;
 }
 
-/* REPO IMAGE */
 .repo-photo {
   max-width: 100%;
   height: auto;
@@ -269,16 +265,30 @@ a {
   border-radius: 10px;
 }
 
-/* REPO DESCRIPTION */
 .repo-description {
   font-size: 1em;
   color: #555;
   margin: 0;
 }
 
-/* ComicsPage - Product Cards */
+/* COMICS */
 .comics-page {
   padding: 3rem 2rem;
+}
+
+.comics-header {
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Kanit", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #201c35;
+  transition: all 0.3s ease;
+}
+
+.comics-header:hover {
+  color:#09866d;
 }
 
 .product-grid {
@@ -357,6 +367,16 @@ a {
   box-sizing: border-box;
 }
 
+.contact-header {
+  text-decoration: none;
+  text-align: center;
+  font-size: 2em;
+  font-family: "Kanit", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: #201c35;
+}
+
 h2 {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -423,7 +443,7 @@ textarea {
 }
 
 .submit:hover {
-  background-color: #23f0c7;
+  background-color: #09866d;
   color: black;
 }
 
@@ -457,7 +477,7 @@ p {
 }
 
 .back-to-top-btn:hover {
-  background-color: #23f0c7;
+  background-color: #09866d;
   color: black;
 }
 
