@@ -11,7 +11,8 @@ export default function ComicsPage() {
         <h2 className="comics-header">Comics</h2>
       </a>
       <div className="product-grid">
-        {/* Frankie*/}
+
+        {/* Frankie */}
         <div className="product-card">
           <img
             src="/images/frankie-cover.jpg"
@@ -21,32 +22,38 @@ export default function ComicsPage() {
           <h3 className="product-title">
             Frankie Langley and the Inter-Galactic Post Office
           </h3>
-          <p className="product-price">$15.00</p>
-          <a
-            href="https://mattstyles.bigcartel.com/product/frankie-langley-and-the-inter-galactic-post-office"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="buy-button">Buy Now</button>
-          </a>
+          <div className="product-card-footer">
+            <p className="product-price">$15.00</p>
+            <a
+              href="https://mattstyles.bigcartel.com/product/frankie-langley-and-the-inter-galactic-post-office"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="buy-button">Buy Now</button>
+            </a>
+          </div>
         </div>
 
         {/* Benny */}
         <div className="product-card">
           <img
             src="/images/benny-cover.jpg"
-            alt="Benny"
+            alt="Frankie"
             className="product-image"
           />
-          <h3 className="product-title">Benny and the Lich</h3>
-          <p className="product-price">$10.00</p>
-          <a
-            href="https://mattstyles.bigcartel.com/product/benny-and-the-lich"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <button className="buy-button">Buy Now</button>
-          </a>
+          <h3 className="product-title">
+            Benny and the Lich
+          </h3>
+          <div className="product-card-footer">
+            <p className="product-price">$10.00</p>
+            <a
+              href="https://mattstyles.bigcartel.com/product/benny-and-the-lich"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="buy-button">Buy Now</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
