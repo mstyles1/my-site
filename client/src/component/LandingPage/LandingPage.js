@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CodingPage from "../CodingPage/CodingPage";
 import ComicsPage from "../ComicsPage/ComicsPage";
 import ContactPage from "../ContactPage/ContactPage";
 
 
+const BackToTopButton = () => {
+  const [visible, setVisible] = useState(false);
 
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.pageYOffset > 300) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", toggleVisibility);
+    return () => window.removeEventListener("scroll", toggleVisibility);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  if (!visible) return null;
+
+  return (
+    <button
+      onClick={scrollToTop}
+      className="back-to-top-btn"
+      aria-label="Back to top"
+    >
+      ^
+    </button>
+  );
+};
 const LandingPage = () => {
   return (
     <div className="content">
@@ -52,6 +86,9 @@ const LandingPage = () => {
 
       {/* Contact Section */}
       <ContactPage/>
+
+      {/*BacktoTopButtom*/}
+      <BackToTopButton/>
     </div>
   );
 };

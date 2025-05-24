@@ -345,7 +345,6 @@ button:hover {
   box-sizing: border-box;
 }
 
-
 h2 {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -415,6 +414,33 @@ p {
   text-align: center;
   font-size: 1.2rem;
   color: #333;
+}
+
+/*Scroll Button*/
+.back-to-top-btn {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  padding: 10px 15px;
+  font-weight: 800;
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  background-color: #201c35;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top-btn:hover {
+  background-color: #23f0c7;
+  color: black;
 }
 
 /*Footer*/
